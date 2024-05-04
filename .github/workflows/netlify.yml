@@ -30,6 +30,15 @@ jobs:
   deploy-netlify:
     runs-on: ubuntu-22.04
     steps:
+      - name: Setup NodeJS
+        uses: actions/setup-node@v4
+        with:
+          node-version: 16
+          cache: "npm"
+
+      - name: Build project
+        run: npm run build
+
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v3.0
         with:
