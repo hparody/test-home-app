@@ -6,7 +6,7 @@ on:
     branches:
       - prod
 jobs:
-  test-react-app:
+  deploy-to-prod:
     runs-on: ubuntu-22.04
     steps:
       - name: Actions checkout
