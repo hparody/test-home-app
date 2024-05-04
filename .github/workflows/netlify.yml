@@ -26,6 +26,9 @@ jobs:
   deploy-netlify:
     runs-on: ubuntu-22.04
     steps:
+      - name: Actions checkout
+        uses: actions/checkout@v4
+
       - name: Install Netlify
         run: npm install netlify-cli@17.10.1 -g
 
